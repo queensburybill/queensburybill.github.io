@@ -1,0 +1,87 @@
+/* color variables */
+/* p {
+  --main-color: red;
+}
+
+div {
+  --main-color: blue;
+} */
+
+body {
+  font-family: sans-serif;
+}
+
+div {
+  margin: 40px auto 10px;
+  /* background-color: var(--main-color); */
+}
+
+p {
+  background-color: var(--main-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0;
+  margin-top: 30px;
+}
+
+.tagline {
+  font-family: sans-serif;
+  font-size: 80%;
+  font-weight: 300;
+  font-style: italic;
+  margin-left: 20px;
+}
+
+nav {
+  box-sizing: border-box;
+  height: 38px;
+  background-color: rgb(135, 185, 214);
+  margin-top: 10px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  list-style-type: none;
+  float: left;
+  padding: 12px 20px 6px 20px;
+  background-color: rgb(135, 185, 214);
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transition: padding 0.5s;
+}
+
+nav li:first-child {
+  border-left: 2px solid #fff;
+}
+
+nav li:last-child {
+  border-right: 2px solid #fff;
+}
+
+nav li:hover {
+  padding: 12px 20px 26px 20px;
+}
+
+nav li a {
+  font-size: 110%;
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  clear: both;
+}
+
+header {
+  margin-top: 40px;
+}
