@@ -1,3 +1,17 @@
+/* color variables */
+p {
+  --main-color: red;
+}
+
+div {
+  --main-color: blue;
+}
+
 div {
   margin: 40px auto;
+  background-color: var(--main-color);
+}
+
+p {
+  background-color: var(--main-color);
 }
