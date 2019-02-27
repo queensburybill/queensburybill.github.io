@@ -31,7 +31,7 @@ header {
   box-sizing: border-box;
   height: 90px;
   /* overflow: hidden; */
-  padding-top: 45px;
+  padding-top: 35px;
   background-image: url("img/crazy_cat.jpeg");
   background-repeat: no-repeat;
 }
