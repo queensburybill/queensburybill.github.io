@@ -97,9 +97,9 @@ nav li a {
   box-sizing: border-box;
 }
 
-.col-1 {
+/* .col-1 {
   width: 5.91%;
-}
+} */
 .col-2 {
   width: 16.67%;
   background-color: rgb(243, 243, 130);
@@ -125,4 +125,8 @@ nav li a {
 }
 .col-12 {
   width: 100%;
+}
+
+.new-class {
+  display: block;
 }
