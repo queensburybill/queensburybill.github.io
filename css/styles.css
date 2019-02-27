@@ -31,7 +31,11 @@ header {
   box-sizing: border-box;
   height: 90px;
   /* overflow: hidden; */
+<<<<<<< HEAD
   padding-top: 45px;
+=======
+  padding-top: 40px;
+>>>>>>> 005e11dd04e6977bb85c347c192305f6decc7726
   background-image: url("img/crazy_cat.jpeg");
   background-repeat: no-repeat;
 }
@@ -97,9 +101,9 @@ nav li a {
   box-sizing: border-box;
 }
 
-/* .col-1 {
+.col-1 {
   width: 5.91%;
-} */
+}
 .col-2 {
   width: 16.67%;
   background-color: rgb(243, 243, 130);
