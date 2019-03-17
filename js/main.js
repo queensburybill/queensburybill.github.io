@@ -7,25 +7,20 @@ function submit() {
   const display1 = document.getElementById("display1");
   const display2 = document.getElementById("display2");
 
-  let person = {};
+  let name = form.name.value;
+  let password = form.password.value;
+  let age = form.age.value;
+  let story = form.story.value;
 
-  person.name = form.name.value;
-  person.password = form.password.value;
-  person.age = form.age.value;
-  person.story = form.story.value;
-
-  const personKeys = Object.keys(person);
-
-  for (let i = 0; i < personKeys.length; i++) {
-    let node = document.createElement("h4");
-    let textnode = document.createTextNode(personKeys[i]);
-    node.appendChild(textnode);
-  }
+  // for (let i = 0; i < personKeys.length; i++) {
+  //   let node = document.createElement("h4");
+  //   let textnode = document.createTextNode(personKeys[i]);
+  //   node.appendChild(textnode);
+  // }
 
   display1.innerHTML = `Hi ${name}! Your password is ${password}. You are ${age} years old.`;
-  display2.innerHTML = `Your story is ${story}`;
+  display2.innerHTML = `Your favorite fruits are ${story}`;
 
-  //   alert("Hello " + name + "!");
 
   event.preventDefault();
 }

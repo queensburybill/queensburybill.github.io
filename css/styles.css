@@ -15,59 +15,44 @@ p {
   background-color: var(--main-color);
 }
 
-button {
-  margin-top: 5px;
-}
-
-label {
-  display: block;
-}
-
-.form-control {
-  display: block;
-  width: 600px;
-  margin: 10px 0;
-}
-
-.form-control textarea {
-  width: 600px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+/*******************************************/
+/*  HEADER  */
+/*******************************************/
 
 header {
   box-sizing: border-box;
   min-height: 120px;
   overflow: hidden;
-  padding-top: 60px;
-  background-image: url("../img/clouds_panorama.jpg");
+  padding-top: 45px;
+  background-image: url("../img/cranberries-957583_960_720.jpg");
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center;
   background-size: 100%;
-  background-color: red;
+  background-color: white;
   margin-bottom: 0;
 }
 
 h1 {
-  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 0 6px black;
+  font-size: 200%;
   text-align: center;
   margin: 0 0 15px;
   overflow: hidden;
 }
 
-.tagline {
-  display: none;
+.span {
+  font-weight: 100;
 }
 
+/*******************************************/
+/*  NAVIGATION  */
+/*******************************************/
+
 .navbar {
-  height: 38px;
+  height: 37px;
   width: 100%;
-  background-color: rgb(135, 185, 214);
+  background-image: linear-gradient(to right, #cf091a 40%,#1c41e6 60%);
 }
 
 nav {
@@ -78,7 +63,7 @@ nav {
 }
 
 ul {
-  width: 700px;
+  width: 540px;
   height: 38px;
   margin: 0 auto;
   padding: 0;
@@ -89,7 +74,7 @@ li {
   list-style-type: none;
   float: left;
   padding: 9px 20px 8px 20px;
-  background-color: rgb(135, 185, 214);
+  background-color: #cecece;
   border-right: 1px solid #fff;
   border-left: 1px solid #fff;
   transition: padding 0.5s;
@@ -102,7 +87,7 @@ li:first-child {
 ul::before,
 ul::after {
   content: "";
-  background-color: rgb(135, 185, 214);
+  background-color: #cecece;
   width: 100%;
 }
 
@@ -111,13 +96,40 @@ li:last-child {
 }
 
 li:hover {
-  padding: 9px 20px 108px 20px;
+  padding: 9px 20px 40px 20px;
 }
 
 nav li a {
   font-size: 110%;
   color: #fff;
   text-decoration: none;
+}
+
+.apples {
+  background-color: #cf091a;
+}
+.bananas {
+  background-color: rgb(216, 177, 6);
+}
+.oranges {
+  background-color: rgb(241, 111, 3);
+}
+.limes {
+  background-color: rgb(70, 184, 35);
+}
+.blueberries {
+  background-color: #1c41e6;
+}
+
+/*******************************************/
+/*  LAYOUT  */
+/*******************************************/
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 [class*="col-"] {
@@ -163,16 +175,6 @@ nav li a {
   display: block;
 }
 
-.test {
-  border: 1px solid blue;
-  clear: both;
-}
-
-.columns {
-  overflow: hidden;
-  background-color: #eee;
-}
-
 .clearfix::after {
   content: "";
   clear: both;
@@ -184,15 +186,47 @@ nav li a {
   float: left;
 }
 
+/*******************************************/
+/*  FORMS  */
+/*******************************************/
+
+button {
+  margin-top: 5px;
+}
+
+label {
+  display: block;
+}
+
+.form-control {
+  display: block;
+  width: 600px;
+  margin: 10px 0;
+}
+
+.form-control textarea {
+  width: 600px;
+}
+
+.columns {
+  overflow: hidden;
+  background-color: #eee;
+}
+
+/*******************************************/
+/*  MISC  */
+/*******************************************/
+
+.test {
+  border: 1px solid blue;
+  clear: both;
+}
+
+/*******************************************/
+/*  MEDIA QUERIES  */
+/*******************************************/
+
 @media (min-width: 768px) {
-  .tagline {
-    display: inline;
-    font-family: sans-serif;
-    font-size: 80%;
-    font-weight: 300;
-    font-style: italic;
-    margin-left: 20px;
-  }
   h1 {
     font-size: 200%;
   }
