@@ -20,6 +20,24 @@ p {
   background-color: var(--main-color);
 }
 
+button {
+  margin-top: 5px;
+}
+
+label {
+  display: block;
+}
+
+.form-control {
+  display: block;
+  width: 600px;
+  margin: 10px 0;
+}
+
+.form-control textarea {
+  width: 600px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -32,8 +50,9 @@ header {
   height: 90px;
   /* overflow: hidden; */
   padding-top: 40px;
-  background-image: url("img/crazy_cat.jpeg");
+  background-image: url("../img/crazy_cat.jpeg");
   background-repeat: no-repeat;
+  background: #ddd;
 }
 
 h1 {
@@ -109,12 +128,14 @@ nav li a {
 }
 .col-4 {
   width: 33.33%;
+  background-color: rgb(209, 196, 196);
 }
 .col-6 {
   width: 50%;
 }
 .col-8 {
   width: 66.67%;
+  background-color: rgb(196, 209, 197);
 }
 .col-9 {
   width: 75%;
@@ -129,4 +150,14 @@ nav li a {
 
 .new-class {
   display: block;
+}
+
+.test {
+  border: 1px solid blue;
+  clear: both;
+}
+
+.columns {
+  overflow: hidden;
+  background-color: #eee;
 }

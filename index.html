@@ -28,7 +28,27 @@
     <div class="container">
       <section>
         <h3>We're here for you when you weren't there for them.</h3>
-        <img src="img/crazy_cat.jpeg" />
+        <form id="form">
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+          </div>
+          <div class="form-control">
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" />
+          </div>
+          <div class="form-control">
+            <label for="story">Story</label>
+            <textarea name="story" id="story" rows="5"></textarea>
+          </div>
+          <button type="submit" id="hello">Say Hello!</button>
+        </form>
+        <h4 id="display1"></h4>
+        <h4 id="display2"></h4>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
           facilis quidem eaque. Quas amet impedit animi quasi? Atque iste ullam
@@ -42,7 +62,7 @@
           consequuntur impedit.
         </p>
       </section>
-      <section>
+      <section class="columns">
         <div class="col-2">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
@@ -67,6 +87,34 @@
           </p>
         </div>
       </section>
+      <p class="test">Here's another paragraph</p>
+      <section class="columns">
+        <div class="col-4">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+            dolorem repellat quisquam saepe nihil, fuga numquam mollitia
+            consequatur, labore perferendis doloremque totam magni amet neque
+            quos deleniti dolor aspernatur esse.
+          </p>
+        </div>
+        <div class="col-8">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            placeat nostrum enim, iure provident voluptas at saepe dicta
+            laudantium, culpa dignissimos exercitationem ipsum alias. Aliquam
+            eos numquam perferendis in ea. Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Eos modi, veritatis a tenetur in aut
+            ducimus est alias repellat, nihil pariatur animi eligendi rerum
+            nesciunt minima recusandae sed doloribus quidem? Lorem ipsum, dolor
+            sit amet consectetur adipisicing elit. Repudiandae doloribus ipsam
+            quisquam sed iure, quasi optio hic provident earum dignissimos. Eos
+            nostrum exercitationem necessitatibus deserunt dolore est, minus
+            numquam corporis?
+          </p>
+        </div>
+        <p class="test">Here's another paragraph</p>
+      </section>
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
