@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/javascript_practice.css" />
+    <title>My test site</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>My Favorite Fruit</h1>
+      </div>
+    </header>
+    <nav class="clearfix">
+      <div class="navbar">
+        <ul>
+          <li class="apples"><a href="#">Apples</a></li>
+          <li class="oranges"><a href="#">Oranges</a></li>
+          <li class="bananas"><a href="#">Bananas</a></li>
+          <li class="limes"><a href="#">Limes</a></li>
+          <li class="blueberries"><a href="#">Blueberries</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <section>
+        <h3>Let's celebrate fruit!</h3>
+        <form id="form">
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+          </div>
+          <div class="form-control">
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" />
+          </div>
+          <div class="form-control">
+            <label for="story"
+              >List Your Favorite Fruits <em>- separated by spaces</em></label
+            >
+            <textarea
+              name="story"
+              id="story"
+              rows="3"
+              placeholder="apples bananas grapes..."
+            ></textarea>
+          </div>
+          <button type="submit" id="hello">Submit My Fruit!</button>
+        </form>
+        <h4 id="display1"></h4>
+        <h4 id="display2"></h4>
+      </section>
+    </div>
+    <script src="js/javascript_practice.js"></script>
+  </body>
+</html>
