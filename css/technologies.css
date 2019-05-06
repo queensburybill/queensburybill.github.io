@@ -99,10 +99,10 @@ see http://getbem.com/
   top: 5.8em;
   font-size: 0.83em;
   line-height: 1.2em;
-  color: #deb331;
+  /* color: #deb331; */
+  color: #686868;
   width: 100%;
   text-align: center;
-  display: none;
 }
 .tech--grid-icon svg {
   width: 60%;
@@ -118,9 +118,9 @@ see http://getbem.com/
 .tech--grid-icon.active svg polygon {
   fill: #deb331;
 }
-.tech--grid-icon:hover .tech--grid-icon-popup {
+/* .tech--grid-icon:hover .tech--grid-icon-popup {
   display: block;
-}
+} */
 
 /*** TECH Media Queries **************************/
 

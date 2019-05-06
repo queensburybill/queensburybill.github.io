@@ -7,6 +7,8 @@ $(function() {
   $(document).mouseup(e => {
     const $techGrid = $(".tech--grid");
     const $techPopup = $(".tech--popup");
+    const $viewTech = $("#view-technologies");
+    $viewTech.text(""); 
 
     // if the target of the click is neither the tech grid nor a descendant.
     if (!$techGrid.is(e.target) && $techGrid.has(e.target).length === 0) {
@@ -19,11 +21,41 @@ $(function() {
   const technologies = $(".tech--grid-icon");
 
   technologies.each((i, technology) => {
+
     const $tech = $(technology);
+
+    // Places the technology name in viewTechnologies "function" as an arg.
+    // Only works if tech graphic is closed. If tech graphic is open, icon pop-up will show instead.
+    $tech.hover(
+      function() { 
+        const $viewTech = $("#view-technologies");
+        const $techName = $($(this).find("[data-tech-name]")[0]).attr("data-tech-name");
+        const $techIconPopup = $($(this).find(".tech--grid-icon-popup")[0]);
+        if ($(".tech--popup").css("display") === "none") {
+          $viewTech.text(` ${$techName} `);
+          $viewTech.removeClass("display-none", 2000);
+        } else { $techIconPopup.removeClass("display-none") }
+      }, 
+      function() { 
+        const $viewTech = $("#view-technologies");
+        const $techIconPopup = $($(this).find(".tech--grid-icon-popup")[0]);
+        if ($(".tech--popup").css("display") === "none") {
+          $viewTech.text(""); 
+          $viewTech.addClass("display-none", 2000);
+        } else { $techIconPopup.addClass("display-none") }
+      } 
+    );
+
+
     $tech.on("click", function() {
 
       $(".tech--grid-icon").removeClass("active");
       $(this).addClass("active");
+
+      // Keeps the argument in the viewTechnologies "function"
+      const $viewTech = $("#view-technologies");
+      const $techName = $($(this).find("[data-tech-name]")[0]).attr("data-tech-name");
+      $viewTech.text(` ${$techName} `) ;
 
       const $dataElement = $($(this).find("[data-tech-proficiency]")[0]);
 
