@@ -22,7 +22,6 @@ body {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 div, article, aside, details,
 figcaption, figure, footer,
@@ -75,7 +74,7 @@ hr {
   margin-left: 2em;
 }
 section {
-  margin-bottom: 6em;
+  margin-bottom: 20em;
 }
 aside {
   font-size: 0.8rem;
@@ -127,6 +126,28 @@ aside img {
 .design--images .design--image-box:hover h3 {
   display: inline-flex;
 }
+.typing {
+  /* Ensures the content is not revealed until the animation */
+  overflow: hidden; 
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
 /*** OVERALL Media Queries **************************/
 @media (min-width: 501px) {
   /* This controls the overall base font size according to viewport width */
@@ -195,6 +216,19 @@ main {
 /****************************************/
 .about p {
   margin-bottom: 1.5em;
+}
+
+
+/****************************************/
+/*** FLOATING IMAGES ********************/
+/****************************************/
+#coffee-hand {
+  position: fixed;
+  top: 20em;
+  right: -250px;
+}
+#coffee-hand img {
+  /* position: relative; */
 }
 
 
