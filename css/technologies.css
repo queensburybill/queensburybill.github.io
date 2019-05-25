@@ -63,14 +63,16 @@ see http://getbem.com/
 }
 .tech--popup-experience h3 {
   color: #00b3c8;
+  color: #afafaf;
 }
 .tech--popup-experience a {
   text-decoration: none;
   color: #afafaf;
-  border-bottom: .15em dotted #afafaf;
+  border-bottom: .1em dotted #afafaf;
 }
 .tech--popup-experience a:hover {
-  border-bottom: .15em dotted #deb331;
+  color: #deb331;
+  border-bottom: .1em dotted #deb331;
 }
 
 /*** TECH GRID **************************/
@@ -91,8 +93,8 @@ see http://getbem.com/
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 6.5em;
-  height: 6.5em;
+  width: 6.1em;
+  height: 6.1em;
 }
 .tech--grid-icon-popup {
   position: absolute;

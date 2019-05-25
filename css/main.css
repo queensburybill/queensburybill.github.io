@@ -19,7 +19,7 @@ body {
   font-weight: 700;
   background-color: #232323;
   background-image: url("../img/bills-website-bg.jpg");
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -119,7 +119,7 @@ nav {
   justify-content: center;
   align-items: center;
   height: 4.5em;
-  background-color: #232323cc;
+  background-color: #232323dd;
   padding: 0 1.5em;
 }
 nav a,
@@ -157,6 +157,7 @@ nav #w-nav-logo:hover polygon {
   text-align: center;
   background-color: #00b3c8;
   display: none;
+  box-shadow: 0 0.3em 0.4em #00000044;
 }
 .header--pedigree p {
   color: #fff;
@@ -214,25 +215,45 @@ main {
 
 
 /****************************************/
+/*** MY INTERESTS ***********************/
+/****************************************/
+#my-interests {
+  width: 100%;
+  margin-bottom: 8em;
+}
+.my-interests {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+.my-interests p {
+  margin-bottom: 1.5em;
+}
+
+
+/****************************************/
 /*** TECH *******************************/
 /****************************************/
 #tech {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  margin-bottom: 10em;
 }
 .tech {
   position: relative;
   max-width: 900px;
-  min-height: 100vh;
   margin: 0 auto;
   padding: 0 1.5em;
 }
-.tech .content {
-  position: absolute;
-  left: 0;
-  top: calc(50% - 324px + 30px);
-  height: auto;
+
+
+/****************************************/
+/*** DEVELOPMENT ************************/
+/****************************************/
+#development {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10em;
 }
 
 
@@ -242,60 +263,84 @@ main {
 #design {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  background-color: #ffffff;
+  margin-bottom: 8em;
 }
 .design{
   position: relative;
   max-width: 900px;
-  min-height: 100vh;
   margin: 0 auto;
-  padding: 0 1.5em;
 }
-.design .content {
-  /* position: absolute;
-  left: 0;
-  top: calc(50% - 324px + 30px); */
-}
-.design {
-  margin-bottom: 0;
-}
-.design--images {
-  display: flex;
-  flex-wrap: wrap; 
+
+
+/****************************************/
+/*** GALLERY ****************************/
+/****************************************/
+.gallery--wrapper {
   width: 100%;
-  background-color: #ffffff;
-  padding: 20px;
+  background-color: #00b3c8;
+  margin-top: 1.5em;
+  padding: 2em 2em 0;
 }
-.design--images img {
-  height: 260px;
+.gallery--images {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
 }
-.design--image-box {
+.image-box {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-right: 20px;
-  background-color: #fff;
+  align-items: center;
+  flex-basis: 48%;
+  background-color: #deb331;
+  box-shadow: 0.4em 0.4em 0.6em #00000044;
+  margin-bottom: 2em;
 }
-.design--images .design--image-box h3 {
+.image-box img {
+  width: 100%;
+}
+.image-box:hover img {
+  opacity: 0.1;
+  filter: grayscale(100%);
+}
+.image-box-label {
   display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   position: absolute;
-  bottom: 1em;
-  left: 1em;
-  /* font-weight: 700; */
-  /* color: #232323; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+.image-box:hover .image-box-label {
+  display: flex;
+  cursor: pointer;
+}
+.image-box h2 {
   color: #fff;
 }
-.design--images .design--image-box:hover {
-  background-color: #deb331;
-}
-.design--images .design--image-box:hover img {
-  filter: opacity(0.1)
-}
-.design--images .design--image-box:hover h3 {
-  display: inline-flex;
+
+/****************************************/
+/*** FOOTER *****************************/
+/****************************************/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 6em;
+  background-color: #00b3c8;
 }
 
+footer p {
+  color: #222;
+}
 
 /****************************************/
 /*** FLOATING IMAGES ********************/

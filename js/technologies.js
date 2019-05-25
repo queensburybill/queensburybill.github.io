@@ -49,7 +49,6 @@ $(function() {
 
   function runTechAnimation($gridIcon, newPercent, techName, $techHTML) {
 
-    console.log("$gridIcon:", $gridIcon);
     $gridIcon.addClass("running");
 
     const $techPopup = $(".tech--popup");
