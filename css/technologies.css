@@ -13,9 +13,9 @@ see http://getbem.com/
 
 /*** TECH POP-UP **************************/
 .tech--popup {
-  display: none;
+  /* display: none; */
   /* Needs to be fixed height for jQuery slider to work */
-  height: 23.5rem;
+  /* height: 23.5rem; */
   padding: 1em 0;
 }
 
@@ -62,7 +62,7 @@ see http://getbem.com/
   padding-top: .5em;
 }
 .tech--popup-experience h3 {
-  color: #deb331;
+  color: #00b3c8;
 }
 .tech--popup-experience a {
   text-decoration: none;
@@ -70,7 +70,7 @@ see http://getbem.com/
   border-bottom: .15em dotted #afafaf;
 }
 .tech--popup-experience a:hover {
-  border-bottom: .15em solid #deb331;
+  border-bottom: .15em dotted #deb331;
 }
 
 /*** TECH GRID **************************/
@@ -163,4 +163,13 @@ see http://getbem.com/
     text-align: left;
     padding-left: 16.5em;
   }
+}
+
+@media (min-width: 945px) {
+  /* This makes the last flex row align left */
+  /* .tech--grid:after {
+    display: none;
+    content: '';
+    flex: auto;
+  } */
 }

@@ -1,6 +1,14 @@
 let btn = document.getElementsByTagName("button")[0];
 const form = document.getElementById("form");
 
+// This is an unnecessary script for a sticky navbar. It's unnecessary because
+// you can just use "position: sticky; top: 0;" to achieve the same result in a
+// more browser-friendly way.
+// let navbar = document.getElementById("navbar");
+// document.addEventListener("scroll", function() {
+//   navbar.style.top = Math.max(120, window.scrollY) + "px";
+// });
+
 form.onsubmit = submit;
 
 function submit() {
