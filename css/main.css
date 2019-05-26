@@ -14,13 +14,15 @@ html {
   font-size: 0.8em;
 }
 body {
+  position: relative;
   font-size: 0.9rem;
   font-family: "Roboto Mono", monospace, sans-serif;
   font-weight: 700;
   background-color: #232323;
-  background-image: url("../img/bills-website-bg.jpg");
+  /* background-image: url("../img/bills-website-bg.jpg");
   background-position: center top;
-  background-repeat: no-repeat;
+  background-size: 100%;
+  background-repeat: no-repeat; */
 }
 div, article, aside, details,
 figcaption, figure, footer,
@@ -100,6 +102,39 @@ hr {
   html {
     font-size: 1em;
   }
+}
+
+
+/****************************************/
+/*** PARALLAX ***************************/
+/****************************************/
+main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 1px;
+  perspective-origin: 0 0;
+}
+.background-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 1600px;
+  overflow-y: hidden;
+  background-color: #232323;
+  transform-origin: 0 0;
+  transform: translateZ(-1px) scale(2);
+}
+.background-1 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.foreground {
+  position: relative;
 }
 
 
@@ -218,7 +253,7 @@ nav #w-nav-logo:hover polygon {
 #design {
   position: relative;
   width: 100%;
-  margin-bottom: 8em;
+  margin-bottom: 0;
 }
 
 
@@ -228,7 +263,11 @@ nav #w-nav-logo:hover polygon {
 #my-interests {
   position: relative;
   width: 100%;
-  margin-bottom: 8em;
+  background-image: url("../img/bills-website-bg-2.jpg");
+  background-position: 50% 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 8em 0;
 }
 
 

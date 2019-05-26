@@ -1,10 +1,10 @@
 $(function() {
   
-  let windowH = $(window).height();
+  // let windowH = $(window).height();
 
-  $(window).scroll(() => {
-    parallax();
-  });
+  // $(window).scroll(() => {
+  //   parallax();
+  // });
 
   // Inline IMG to SVG - fetch svg code with a local AJAX call to the img folder
   // This will produce a CORS error on chrome when working locally.
