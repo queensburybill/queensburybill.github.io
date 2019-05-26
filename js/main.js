@@ -1,13 +1,7 @@
 $(function() {
-  
-  // let windowH = $(window).height();
-
-  // $(window).scroll(() => {
-  //   parallax();
-  // });
 
   // Inline IMG to SVG - fetch svg code with a local AJAX call to the img folder
-  // This will produce a CORS error on chrome when working locally.
+  // This won't work on chrome/safari when working locally.
   $("img.svg").each(function () {
     var $img = $(this);
     var imgID = $img.attr("id");
@@ -36,23 +30,6 @@ $(function() {
       $img.replaceWith($svg);
     }, "xml");
   });
-
-  // $(".image-box").hover(function() {
-  //   const $img = $(this).find("img:first-child");
-  //   const text = $img.attr("data-name");
-  //   $img.replace(`img/portfolio/portfolio-advertising.jpg`);
-  // });
-  
-  // Parallax helper function.
-  const parallax = () => {
-    let wScroll = $(window).scrollTop();
-  
-    $("body").css("background-position", "center " + (wScroll * 0.7) + "px");
-  
-    // const $coffeeHand = $("#coffee-hand");
-    $("#coffee-hand").css("top", windowH + (wScroll * -2) + "px");
-  
-  };
   
 });
 

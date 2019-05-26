@@ -49,6 +49,7 @@ $(function() {
 
   function runTechAnimation($gridIcon, newPercent, techName, $techHTML) {
 
+    // Prevent the other tech icons from being clicked while animation is running.
     $gridIcon.addClass("running");
 
     const $techPopup = $(".tech--popup");
@@ -60,8 +61,21 @@ $(function() {
     const circleGroups = $($techPopup.find("svg g"));
 
     // Set new tech name and description
-    $techExpName.text(techName);
-    $techExpDesc.html($techHTML);
+    $techExpName
+      .fadeOut(450)
+      .queue(function(n) {
+          $(this).text(techName);
+          n();
+      })
+      .fadeIn(450)
+    
+    $techExpDesc
+      .fadeOut(450)
+      .queue(function(n) {
+          $(this).html($techHTML);
+          n();
+      })
+      .fadeIn(450)
 
 
     for (let i = 0; i <= circleGroups.length - 1; i++) {
@@ -85,6 +99,7 @@ $(function() {
         }
       }, 15 * (i + 36));
 
+      // When animation is finished, make other tech icons clickable again.
       if (i === circleGroups.length - 1) {
         setTimeout(() => {
           $gridIcon.removeClass("running");

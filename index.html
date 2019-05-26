@@ -21,15 +21,49 @@
 
     <header>
       <nav class="navbar">
-        <a href="https://www.linkedin.com/in/williampeirce" target="_blank">
-          <img id="linkedin" class="svg" src="img/linkedin.svg" alt="LinkedIn nav-link">
-        </a>
-        <p>
-          <img id="w-nav-logo" class="svg" src="img/w-nav-logo.svg" alt="w nav-link">
-        </p>
-        <a href="https://github.com/queensburybill" target="_blank">
-          <img id="github" class="svg" src="img/github.svg" alt="GitHub nav-link">
-        </a>
+        <ul id="nav-navbar" class="active">
+          <li id="linkedin-navbar">
+            <a href="https://www.linkedin.com/in/williampeirce" target="_blank">
+              <img id="linkedin" class="svg" src="img/linkedin.svg" alt="LinkedIn nav-link">
+            </a>
+          </li>
+          <li>
+            <p>
+              <img id="w-nav-logo" class="svg" src="img/w-nav-logo.svg" alt="w nav-link">
+            </p>
+          </li>
+          <li id="github-navbar">
+            <a href="https://github.com/queensburybill" target="_blank">
+              <img id="github" class="svg" src="img/github.svg" alt="GitHub nav-link">
+            </a>
+          </li>
+        </ul>
+        <ul id="nav-list">
+          <li>
+            <img id="w-list-logo" class="svg" src="img/w-nav-list.svg" alt="w list-link">
+          </li>
+          <li><a href="#about">w.myStory;</a></li>
+          <li><a href="#tech">w.myTools();</a></li>
+          <li><a href="#development">w.myExperience(development);</a></li>
+          <li><a href="#design">w.myExperience(design);</a></li>
+          <li><a href="#my-interests">w.myInterests;</a></li>
+          <li><a href="#contact">w.contact;</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/williampeirce" target="_blank">
+              <img id="linkedin-list" class="svg" src="img/linkedin-list.svg" alt="LinkedIn list-link">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/williampeirce" target="_blank">
+              <img id="github-list" class="svg" src="img/github-list.svg" alt="GitHub list-link">
+            </a>
+          </li>
+        </ul>
+        <div class="menu-btn">
+          <span class="bar" id="bar-1"></span>
+          <span class="bar" id="bar-2"></span>
+          <span class="bar" id="bar-3"></span>
+        </div>
       </nav>
       <div class="header--pedigree">
         <p>william peirce <span>|</span> ui<span>|</span> ux <span>|</span> full stack <span>|</span> web developer <span>|</span> <a href="mailto:queensburybill@gmail.com">queensburybill@gmail.com</a></p>
@@ -42,11 +76,11 @@
       </div>
 
       <div class="foreground">
-        
+
         <section id="about">
           <div class="content">
             <div class="vh-wrapper">
-              <p class="code-comment">// A little about me first:</p>
+              <p class="code-comment">// william peirce: web developer based in queensbury, ny</p>
               <p class="code-heading"><span class="code-special">w</span>.<span class="code-special">myStory</span> = {</p>
                 <p class="tab-1"><span class="code-special">background: </span><span class="code-string">'After a long career as a graphic designer working on interesting projects with extremely creative people, I couldn't get over feeling like I was trying to fit a square peg into a round hole. As soon as I started coding I knew I found my passion.'</span>,</p> 
                 <p class="tab-1"><span class="code-special">goal: </span><span class="code-string">'I\'m currently seeking entry level employment as a full-stack or front-end web developer (preferably using a MERN stack or similar approach) in a supportive and collaborative environment.'</span></p>
@@ -250,7 +284,7 @@
               </div>
               <div class="tech--popup-experience">
                 <h3 id="tech--popup-experience-name">JavaScript</h3>
-                <p id="tech--popup-experience-description">JavaScript is my favorite tool and one of my strongest skills. I have a solid grasp of all the core JavaScript concepts included in both ES5 & ES6 such as scope, higher order functions, classes, asynchronous programming, promises, async/await, polymorphism, recursion, IIFEs, currying, arrow functions, DOM traversal and the 'this' keyword.</p>
+                <p id="tech--popup-experience-description">JavaScript is my favorite tool and one of my strongest skills. I have a solid grasp of all the core ES5 & ES6 JavaScript concepts such as scope, higher order functions, classes, asynchronous programming, promises, async/await, polymorphism, recursion, IIFEs, currying, arrow functions, DOM traversal and the 'this' keyword.</p>
               </div>
             </div>
             <div class="tech--grid">
@@ -267,7 +301,7 @@
               <div class="tech--grid-icon">
                 <img id="javascript" class="svg active" src="img/tech-icons/tech-icon-js.svg" alt="JavaScript">
                 <p class="tech--grid-icon-popup display-none">JavaScript</p>
-                <div data-tech-name="JavaScript" data-tech-proficiency="85" class="display-none">JavaScript is my favorite tool and one of my strongest skills. I have a solid grasp of all the core JavaScript concepts included in both ES5 & ES6 such as scope, higher order functions, classes, asynchronous programming, promises, async/await, polymorphism, recursion, IIFEs, currying, arrow functions, DOM traversal and the 'this' keyword.</div>
+                <div data-tech-name="JavaScript" data-tech-proficiency="85" class="display-none">JavaScript is my favorite tool and one of my strongest skills. I have a solid grasp of all the core ES5 & ES6 JavaScript concepts such as scope, higher order functions, classes, asynchronous programming, promises, async/await, polymorphism, recursion, IIFEs, currying, arrow functions, DOM traversal and the 'this' keyword.</div>
               </div>
               <div class="tech--grid-icon">
                 <img id="html" class="svg" src="img/tech-icons/tech-icon-html.svg" alt="HTML">
@@ -287,7 +321,7 @@
               <div class="tech--grid-icon">
                 <img id="nodejs" class="svg" src="img/tech-icons/tech-icon-node.svg" alt="NodeJS">
                 <p class="tech--grid-icon-popup display-none">NodeJS</p>
-                <div data-tech-name="NodeJS" data-tech-proficiency="50" class="display-none">In March of 2019 I completed a 36-hour NodeJS course offered by Udemy.com covering NodeJS, ExpressJS, authorization, validation, MySQL, MongoDB, sessions, emailing, transactions, error handling, MVC, REST APIs, GraphQL and Websockets IO. Later that spring, the ACC ReactJS instructors asked me to create new back-end features and routes for the students' final project.</div>
+                <div data-tech-name="NodeJS" data-tech-proficiency="50" class="display-none">In March of 2019 I completed a 36-hour NodeJS course offered by Udemy.com covering NodeJS, ExpressJS, authorization, MySQL, MongoDB, sessions, emailing, transactions, error handling, MVC, REST APIs, GraphQL and Websockets IO. Later that spring, the ACC ReactJS instructors asked me to create new back-end features and routes for the students' final project.</div>
               </div>
               <div class="tech--grid-icon">
                 <img id="git" class="svg" src="img/tech-icons/tech-icon-git.svg" alt="Git">
@@ -307,7 +341,7 @@
               <div class="tech--grid-icon">
                 <img id="jquery" class="svg" src="img/tech-icons/tech-icon-jquery.svg" alt="jQuery">
                 <p class="tech--grid-icon-popup display-none">jQuery</p>
-                <div data-tech-name="jQuery" data-tech-proficiency="30" class="display-none">jQuery has been a recent experiment for me. In the past I've mostly used it for traversing the DOM and manipulating elements in small ways, but in this website I've started using it to implement SVG animations and scroll-based UX animations.</div>
+                <div data-tech-name="jQuery" data-tech-proficiency="30" class="display-none">jQuery has been a recent experiment for me. In the past I've mostly used it for traversing the DOM and manipulating elements in small ways, but in this website I've started using it to implement SVG animations (like this one) and scroll-based transitions.</div>
               </div>
               <div class="tech--grid-icon">
                   <img id="sass" class="svg" src="img/tech-icons/tech-icon-sass.svg" alt="Sass">
@@ -322,7 +356,7 @@
               <div class="tech--grid-icon">
                 <img id="wordpress" class="svg" src="img/tech-icons/tech-icon-wordpress.svg" alt="WordPress">
                 <p class="tech--grid-icon-popup display-none">WordPress</p>
-                <div data-tech-name="WordPress" data-tech-proficiency="10" class="display-none">My team's final project for the AlbanyCanCode Front-End Web-Development class was to redesign a website for a local non-profit. We settled on WordPress as a CMS but we also decided to create a custom theme which meant one of us (me) had to learn enough PHP to make that happen. We also had to become familiar with MAMP and the WP dashboard and codex.</div>
+                <div data-tech-name="WordPress" data-tech-proficiency="10" class="display-none">As a final project for the AlbanyCanCode Front-End Web-Development class, my team redesined a website for a local non-profit. We settled on WordPress as a CMS but we also decided to create a custom theme which meant one of us (me) had to learn enough PHP to make that happen. We also had to become familiar with MAMP and the WP dashboard and codex.</div>
               </div>
               <div class="tech--grid-icon">
                 <img id="enzyme" class="svg" src="img/tech-icons/tech-icon-enzyme.svg" alt="Enzyme">
@@ -342,7 +376,7 @@
               <div class="tech--grid-icon">
                 <img id="photoshop" class="svg" src="img/tech-icons/tech-icon-photoshop.svg" alt="Adobe Photoshop">
                 <p class="tech--grid-icon-popup display-none">Adobe Photoshop</p>
-                <div data-tech-name="Adobe Photoshop" data-tech-proficiency="90" class="display-none">I've used Photoshop for over 20 years as the primary tool in my graphic design career. My use of the application mostly includes but isn't limited to image and text manipulation including photo-illustration, retouching, colorizing, adding effects, image optimization, 3D effects and even layout and design.</div>
+                <div data-tech-name="Adobe Photoshop" data-tech-proficiency="90" class="display-none">I've used Photoshop for over 20 years as the primary tool in my graphic design career. My use of the application mostly includes but isn't limited to image and text manipulation including photo-illustration, retouching, colorizing, stylization, image optimization, and layout and design.</div>
               </div>
               <div class="tech--grid-icon">
                 <img id="illustrator" class="svg" src="img/tech-icons/tech-icon-illustrator.svg" alt="Adobe Illustrator">
@@ -440,8 +474,11 @@
           </div>
         </section>
 
-        <footer>
-          <p>&copy;<small>2019 William Peirce</small></p>
+        <footer id="contact">
+          <p>william peirce</p>
+          <p>queensbury, ny</p>
+          <p><a href="mailto:queensburybill@gmail.com">queensburybill@gmail.com</a></p>
+          <p class="copyright"><span>&copy;</span><small>2019 William Peirce</small></p>
         </footer>
 
       </div>
