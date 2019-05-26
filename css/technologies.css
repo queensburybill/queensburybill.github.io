@@ -13,19 +13,18 @@ see http://getbem.com/
 
 /*** TECH POP-UP **************************/
 .tech--popup {
-  /* display: none; */
-  /* Needs to be fixed height for jQuery slider to work */
-  /* height: 23.5rem; */
-  padding: 1em 0;
+  padding: 1em 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /*** TECH Pop-up Proficiency Graphic **************************/
 .tech--popup-proficiency {
   position: relative;
-  font-size: 0.75rem;
-  width: 10rem;
-  height: 10rem;
-  margin: 0 0 0.3rem;
+  font-size: 1rem;
+  width: 15em;
+  height: 15em;
 }
 .tech--popup-proficiency-svg {
   position: relative;
@@ -54,15 +53,15 @@ see http://getbem.com/
 }
 .tech--popup-proficiency-text p {
   height: 1em;
-  color: #b7722f;
+  color: #afafaf;
 }
 
 /*** TECH Pop-up Experience **************************/
 .tech--popup-experience {
-  padding-top: .5em;
+  flex-basis: 100%;
+  padding: .5em 0 0 .5em;
 }
 .tech--popup-experience h3 {
-  color: #00b3c8;
   color: #afafaf;
 }
 .tech--popup-experience a {
@@ -74,6 +73,9 @@ see http://getbem.com/
   color: #deb331;
   border-bottom: .1em dotted #deb331;
 }
+#tech .content .tech--popup-experience p {
+  margin-bottom: 0.5em;
+}
 
 /*** TECH GRID **************************/
 .tech--grid {
@@ -81,7 +83,6 @@ see http://getbem.com/
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: -1.8em;
 }
 /* This makes the last flex row align left */
 .tech--grid:after {
@@ -93,21 +94,20 @@ see http://getbem.com/
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 6.1em;
-  height: 6.1em;
+  width: 6em;
+  height: 6em;
 }
 .tech--grid-icon-popup {
   position: absolute;
-  top: 5.8em;
+  top: 6.5em;
   font-size: 0.83em;
   line-height: 1.2em;
-  /* color: #deb331; */
   color: #686868;
   width: 100%;
   text-align: center;
 }
 .tech--grid-icon svg {
-  width: 60%;
+  width: 100%;
 }
 .tech--grid-icon:hover {
   cursor: pointer;
@@ -120,40 +120,18 @@ see http://getbem.com/
 .tech--grid-icon.active svg polygon {
   fill: #deb331;
 }
-/* .tech--grid-icon:hover .tech--grid-icon-popup {
-  display: block;
-} */
 
 /*** TECH Media Queries **************************/
-
-@media (min-width: 361px) {
+@media (min-width: 576px) {
   .tech--popup {
-    height: 22rem;
-  }
-}
-
-@media (min-width: 431px) {
-  .tech--popup {
-    height: 20rem;
-  }
-}
-
-@media (min-width: 501px) {
-  .tech--popup {
-    height: 16.7rem;
+    justify-content: flex-start;
   }
   .tech--popup-proficiency {
     position: relative;
-    top: 0;
-    left: 0;
-    float: left;
     font-size: 1rem;
     width: 15em;
     height: 15em;
     margin-right: 1rem;
-  }
-  .tech--popup-proficiency-svg {
-    position: absolute;
   }
   .tech--popup-proficiency-text {
     text-align: center;
@@ -161,17 +139,24 @@ see http://getbem.com/
     margin: -2.25em 0 0 -3.5em;
     padding: 0;
   }
+  /* .tech--grid-icon {
+    width: 6em;
+    height: 6em;
+  } */
+  .tech--grid-icon svg {
+    width: 75%;
+  }
+  .tech--grid-icon-popup {
+    top: 5.9em;
+  }
   .tech--popup-experience {
-    text-align: left;
-    padding-left: 16.5em;
+    flex: 1;
+    padding-top: .5em;
   }
 }
 
-@media (min-width: 945px) {
-  /* This makes the last flex row align left */
-  /* .tech--grid:after {
-    display: none;
-    content: '';
-    flex: auto;
-  } */
+@media (min-width: 768px) {
+  .tech--grid-icon svg {
+    width: 60%;
+  }
 }
