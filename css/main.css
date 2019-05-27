@@ -114,12 +114,16 @@ nav {
   left: 0;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #232323dd;
+  background-color: #232323ee;
+  box-shadow: 0 .2em .3em #00000044;
 }
-nav a,
-nav p {
+nav #linkedin-navbar a,
+nav #github-navbar a,
+nav #w-nav-logo p {
   margin: 0 0.3em;
   line-height: 0;
 }
@@ -136,44 +140,70 @@ nav #github-navbar {
   width: 4.5em;
 }
 nav a svg:hover path, 
-nav a svg:hover polygon,
-nav #w-nav-logo:hover path,
-nav #w-nav-logo:hover polygon {
+nav a svg:hover polygon {
   fill: #deb331;
 }
-#w-nav-logo:hover {
-  cursor: pointer;
-}
-ul#nav-list,
 ul#nav-navbar {
-  display: none;
-}
-ul#nav-list.active,
-ul#nav-navbar.active {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   list-style-type: none;
+  width: 100%;
+  margin: 0;
   padding: 0;
 }
-ul#nav-navbar.active {
-  flex-direction: row;
-}
-ul#nav-list.active {
-  flex-direction: column;
-}
-ul li {
+ul#nav-navbar.active #w-logo-navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2.5em;
+  width: 100%;
+  height: 4.5em;
+}
+ul#nav-list {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  width: 100%;
+  height: 36em;
+  margin: 0;
+  padding: 0;
 }
 ul#nav-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  background-color: #00b3c8;
-  border-bottom: 0.1em dotted #fff;
+  height: 4.5em;
+}
+ul.active li {
+  width: 100%;
+  background-color: #232323;
+  border-bottom: 0.1em dotted #ffffff44;
+}
+ul#nav-list li:last-child {
+  box-shadow: 0 .2em .3em #00000077;
+}
+ul#nav-list li svg {
+  width: 4.5em;
+  height: 4.5em;
+}
+ul#nav-list li:hover {
+  background-color: #131313dd;
 }
 ul#nav-list li a {
-  color: #fff;
+  display: block;
+  width: 100%;
+  height: 4.5em;
+  line-height: 4.4em;
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.1em;
+  color: #00b3c8;
+  text-decoration: none;
+}
+ul#nav-list li:hover a {
+  color: #deb331;
 }
 .menu-btn {    
   position: fixed;
@@ -181,16 +211,16 @@ ul#nav-list li a {
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-between;
-  top: 1.7em;
+  top: 1.6em;
   right: 2em;
-  width: 1.8em;
-  height: 1.2em;
-  /* -webkit-animation-name: fadeInRightSmall;
-  animation-name: fadeInRightSmall;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; */
+  width: 2.2em;
+  height: 1.28em;
+}
+.menu-btn:hover {
+  cursor: pointer;
+}
+.menu-btn:hover .bar {
+  background-color: #deb331;
 }
 .bar {
   width: 100%;
@@ -202,14 +232,14 @@ ul#nav-list li a {
   -o-transition: all .2s ease, background .5s ease;
   transition: all .2s ease, background .5s ease;
 }
-ul#nav-list.active .bar#bar-1 {
+.menu-btn.active .bar#bar-1 {
   -webkit-transform: rotate(-45deg) translate(-4px, 6.5px);
   transform: rotate(-45deg) translate(-4px, 6.5px);
 }
-ul#nav-list.active .bar#bar-2 {
+.menu-btn.active .bar#bar-2 {
   opacity: 0;
 }
-ul#nav-list.active .bar#bar-3 {
+.menu-btn.active .bar#bar-3 {
   -webkit-transform: rotate(45deg) translate(-3px, -6.5px);
   transform: rotate(45deg) translate(-3px, -6.5px);
 }
@@ -251,14 +281,22 @@ ul#nav-list.active .bar#bar-3 {
   }
   nav #linkedin-navbar,
   nav #github-navbar {
-    display: inline-flex;
-  }
-  /* ul#nav-navbar {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5em;
+    height: 4.5em;
   }
-  ul#nav-list {
-    display: none;
-  } */
+  ul li {
+    border-bottom: 0 dotted #ffffff44;
+  }
+  nav #w-nav-logo:hover path,
+  nav #w-nav-logo:hover polygon {
+    fill: #deb331;
+  }
+  #w-nav-logo:hover {
+    cursor: pointer;
+  }
 }
 
 
@@ -311,33 +349,47 @@ main {
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
 }
 #about .content {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
 }
 .vh-wrapper {
-  position: absolute;
-  left: 0;
-  top: calc(50% - 16em);
   display: block;
   height: auto;
-  padding: 0 1em;
+  margin: 3em 0;
+  padding: 6em 1em 0;
 }
 
 @media (min-width: 480px) {
+  #about {
+    min-height: 42em;
+  }
+  #about .content {
+    min-height: 42em;
+  }
   .vh-wrapper {
-    top: calc(50% - 13.7em);
+    top: calc(50% - 11em);
   }
 }
 
 @media (min-width: 768px) {
+  #about {
+    min-height: 100vh;
+  }
+  #about .content {
+    min-height: 100vh;
+  }
   .vh-wrapper {
+    position: absolute;
+    left: 0;
     top: calc(50% - 9em);
+    display: block;
+    padding: 0 1em;
+    margin: 0;
+    height: auto;
   }
 }
 
