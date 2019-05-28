@@ -81,8 +81,10 @@ see http://getbem.com/
 .tech--grid {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
+  overflow-x: scroll;
+  height: 8em;
 }
 /* This makes the last flex row align left */
 .tech--grid:after {
@@ -119,6 +121,13 @@ see http://getbem.com/
 .tech--grid-icon.active svg path,
 .tech--grid-icon.active svg polygon {
   fill: #deb331;
+}
+
+@media (min-width: 480px) {
+  .tech--grid {
+    flex-wrap: wrap;
+    overflow-x: unset;
+  }
 }
 
 /*** TECH Media Queries **************************/

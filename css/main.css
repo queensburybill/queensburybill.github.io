@@ -403,6 +403,15 @@ main {
   width: 100%;
   margin-bottom: 10em;
 }
+/* This puts an offset on the scrollTop for the in-page hashchange. */
+#tech::before { 
+  display: flex; 
+  content: " "; 
+  margin-top: -6em; 
+  height: 6em; 
+  visibility: hidden; 
+  pointer-events: none;
+}
 
 
 /****************************************/
@@ -413,6 +422,15 @@ main {
   width: 100%;
   margin-bottom: 10em;
 }
+/* This puts an offset on the scrollTop for the in-page hashchange. */
+#development::before { 
+  display: flex; 
+  content: " "; 
+  margin-top: -6em; 
+  height: 6em; 
+  visibility: hidden; 
+  pointer-events: none;
+}
 
 
 /****************************************/
@@ -422,6 +440,15 @@ main {
   position: relative;
   width: 100%;
   margin-bottom: 0;
+}
+/* This puts an offset on the scrollTop for the in-page hashchange. */
+#design::before { 
+  display: flex; 
+  content: " "; 
+  margin-top: -6em; 
+  height: 6em; 
+  visibility: hidden; 
+  pointer-events: none;
 }
 
 
