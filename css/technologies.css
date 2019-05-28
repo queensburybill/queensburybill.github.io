@@ -83,7 +83,7 @@ see http://getbem.com/
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  overflow-x: scroll;
+  overflow-x: hidden;
   height: 8em;
 }
 /* This makes the last flex row align left */
