@@ -83,8 +83,12 @@ see http://getbem.com/
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  overflow-x: hidden;
+  white-space: nowrap;
+  overflow-x: auto;
   height: 8em;
+}
+.tech--grid::-webkit-scrollbar {
+  display: none;
 }
 /* This makes the last flex row align left */
 .tech--grid:after {
