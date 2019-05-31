@@ -13,12 +13,16 @@ $(function() {
     // Enables tech icon hover fx.
     $tech.hover(
       function() { 
-        const $techIconPopup = $($(this).find(".tech--grid-icon-popup")[0]);
-        $techIconPopup.removeClass("display-none");
+        if ($(window).width() >= 480) {
+          const $techIconPopup = $($(this).find(".tech--grid-icon-popup")[0]);
+          $techIconPopup.removeClass("display-none");
+        }
       }, 
       function() { 
-        const $techIconPopup = $($(this).find(".tech--grid-icon-popup")[0]);
-        $techIconPopup.addClass("display-none");
+        if ($(window).width() >= 480) {
+          const $techIconPopup = $($(this).find(".tech--grid-icon-popup")[0]);
+          $techIconPopup.addClass("display-none");
+        }
       } 
     );
 

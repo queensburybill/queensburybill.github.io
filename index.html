@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-    <!-- This tells ios to use the safari full-screen mode -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>William Peirce</title>
 
@@ -93,7 +90,9 @@
           <div class="content">
             <p class="code-heading"><span class="code-special">w</span>.<span class="code-function">myTools</span>(<span id="view-technologies" class="code-special">JavaScript</span>);</p>
             <hr>
+
             <div class="tech--popup">
+
               <div id="tech--popup-proficiency" class="tech--popup-proficiency">
                 <div class="tech--popup-proficiency-text">
                   <h1><span>85</span>%</h1>
@@ -282,114 +281,120 @@
                   </g>
                 </svg>
               </div>
+
               <div class="tech--popup-experience">
                 <h3 id="tech--popup-experience-name">JavaScript</h3>
                 <p id="tech--popup-experience-description">JavaScript is my favorite tool and one of my strongest skills. I have a solid grasp of all the core ES5 & ES6 JavaScript concepts such as scope, higher order functions, classes, asynchronous programming, promises, async/await, polymorphism, recursion, IIFEs, currying, arrow functions, DOM traversal and the 'this' keyword.</p>
               </div>
+
+              <div class="tech--grid">
+                <!-- IMGs with sources SVGs are replaced by inline SVGs with script in main.js. -->
+        
+                <!-- If you have SVG elements of different shapes, AND you want them to be scalable when the container 
+                    scales, BUT you don't want them to be sized according to the container (for example if the viewbox
+                    is cropped exactly to the image dimensions: a wide image set to "width=80%" will be much smaller 
+                    than a narrow image set to the same width), THEN you MUST make your viewbox the same for ALL images 
+                    (it should be a square based on the largest dimenision found in the group - either width or height). 
+                    THEN you can use that to set your scale relative to the container (ie: svg { width: 80% } ). 
+                    This techinque is easily accomplished in Illustrator by centering all the images on the same sized
+                    artboard before saving as an SVG. -->
+                <div class="tech--grid-icon">
+                  <img id="javascript" class="svg active" src="img/tech-icons/tech-icon-js.svg" alt="JavaScript" title="JavaScript">
+                  <p class="tech--grid-icon-popup display-none">JavaScript</p>
+                  <div data-tech-name="JavaScript" data-tech-proficiency="85" class="display-none">JavaScript is my favorite tool and one of my strongest skills. I have a solid grasp of all the core ES5 & ES6 JavaScript concepts such as scope, higher order functions, classes, asynchronous programming, promises, async/await, polymorphism, recursion, IIFEs, currying, arrow functions, DOM traversal and the 'this' keyword.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="html" class="svg" src="img/tech-icons/tech-icon-html.svg" alt="HTML" title="HTML">
+                  <p class="tech--grid-icon-popup display-none">HTML5</p>
+                  <div data-tech-name="HTML5" data-tech-proficiency="80" class="display-none">I've been working with HTML5 since I first started teaching myself web development about four years ago. While my understanding has grown much in that time, it's such a large and rich mark-up language I'm sure I'll be making new discoveries for years to come.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="css" class="svg" src="img/tech-icons/tech-icon-css.svg" alt="CSS" title="CSS">
+                  <p class="tech--grid-icon-popup display-none">CSS3</p>
+                  <div data-tech-name="CSS3" data-tech-proficiency="60" class="display-none">I've been working with Cascading Style Sheets for about four years now. Some of the latest CSS features I've made use of are Flexbox, Scroll Snapping, Feature Queries and Native Variables. I also now prefer the use of "em" and "rem" measurement units which I find to be essential for responsive design.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="reactjs" class="svg" src="img/tech-icons/tech-icon-react.svg" alt="React" title="React">
+                  <p class="tech--grid-icon-popup display-none">ReactJS</p>
+                  <div data-tech-name="ReactJS" data-tech-proficiency="65" class="display-none">In January 2019 I completed an AlbanyCanCode ReactJS course which made me a devout believer in React. The course covered not only the base ReactJS library but also Axios, React-Redux, React-Router, React-Promises, React-Thunk and React-Bootstrap. For the final project our team developed the front-end portion of the <a href="http://grads.albanycancode.org/" target="_blank">ACC Graduate Portal</a>.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="nodejs" class="svg" src="img/tech-icons/tech-icon-node.svg" alt="NodeJS" title="NodeJS">
+                  <p class="tech--grid-icon-popup display-none">NodeJS</p>
+                  <div data-tech-name="NodeJS" data-tech-proficiency="50" class="display-none">In March of 2019 I completed a 36-hour NodeJS course offered by Udemy.com covering NodeJS, ExpressJS, authorization, MySQL, MongoDB, sessions, emailing, transactions, error handling, MVC, REST APIs, GraphQL and Websockets IO. Later that spring, the ACC ReactJS instructors asked me to create new back-end features and routes for the students' final project.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="git" class="svg" src="img/tech-icons/tech-icon-git.svg" alt="Git" title="Git">
+                  <p class="tech--grid-icon-popup display-none">Git</p>
+                  <div data-tech-name="Git" data-tech-proficiency="15" class="display-none">I freely admit I've barely scratched the surface of Git. I've used it extensively for three team projects but only with a small set of commands. I'm very comfortable with checking out and deleting branches, fetching and tracking remote branches and many of the nuances associated with adding, committing, pushing, pulling and merging code.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="mongodb" class="svg" src="img/tech-icons/tech-icon-mongodb.svg" alt="MongoDB" title="MongoDB">
+                  <p class="tech--grid-icon-popup display-none">MongoDB</p>
+                  <div data-tech-name="MongoDB" data-tech-proficiency="25" class="display-none">I completed MongoDB training provided by Udemy which included the Mongoose ODM. I was then invited by the AlbanyCanCode React instructors to use my new knowledge to help migrate the <a href="http://grads.albanycancode.org/" target="_blank">ACC Graduate Portal</a> from an AWS S3 MySQL database to MongoDB Atlas, creating schemas, managing connections and refactoring the database queries.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="mysql" class="svg" src="img/tech-icons/tech-icon-mysql.svg" alt="MySQL" title="MySQL">
+                  <p class="tech--grid-icon-popup display-none">MySQL</p>
+                  <div data-tech-name="MySQL" data-tech-proficiency="10" class="display-none">So far, my exposure to SQL database structures has been limited. I took a NodeJS course offered by Udemy.com and it briefly covered MySQL using both raw queries and the Sequelize ORM. The lessons covered installing and setting up a MySQL database, creating tables and related tables and making queries.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="jquery" class="svg" src="img/tech-icons/tech-icon-jquery.svg" alt="jQuery" title="jQuery">
+                  <p class="tech--grid-icon-popup display-none">jQuery</p>
+                  <div data-tech-name="jQuery" data-tech-proficiency="30" class="display-none">jQuery has been a recent experiment for me. In the past I've mostly used it for traversing the DOM and manipulating elements in small ways, but in this website I've started using it to implement SVG animations (like this one) and scroll-based transitions.</div>
+                </div>
+                <div class="tech--grid-icon">
+                    <img id="sass" class="svg" src="img/tech-icons/tech-icon-sass.svg" alt="Sass" title="Sass">
+                  <p class="tech--grid-icon-popup display-none">Sass</p>
+                  <div data-tech-name="Sass" data-tech-proficiency="20" class="display-none">Sass is another technology that I find promising but have yet to use in an extensive way. A few years ago I used a similar SSL called Less when designing a Bootstrap-based website in order to manipulate the Bootstrap variables, but my use of Sass has been limited to classroom exercises.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="bootstrap" class="svg" src="img/tech-icons/tech-icon-bootstrap.svg" alt="Bootstrap" title="Bootstrap">
+                  <p class="tech--grid-icon-popup display-none">Bootstrap</p>
+                  <div data-tech-name="Bootstrap" data-tech-proficiency="50" class="display-none">I'm pretty familiar both with Bootstrap 3 and 4. I built a 50+ view website using Bootstrap 3 a couple of years ago (that never made it to deployment). Recently I've been using Bootstrap 4 including its overhaul of the grid system and introduction of cards, spacing utility classes and extensive user of "em" and "rem" units of measurement.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="wordpress" class="svg" src="img/tech-icons/tech-icon-wordpress.svg" alt="WordPress" title="WordPress">
+                  <p class="tech--grid-icon-popup display-none">WordPress</p>
+                  <div data-tech-name="WordPress" data-tech-proficiency="10" class="display-none">As a final project for the AlbanyCanCode Front-End Web-Development class, my team redesined a website for a local non-profit. We settled on WordPress as a CMS but we also decided to create a custom theme which meant one of us (me) had to learn enough PHP to make that happen. We also had to become familiar with MAMP and the WP dashboard and codex.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="enzyme" class="svg" src="img/tech-icons/tech-icon-enzyme.svg" alt="Enzyme" title="Enzyme">
+                  <p class="tech--grid-icon-popup display-none">Enzyme</p>
+                  <div data-tech-name="Enzyme" data-tech-proficiency="30" class="display-none">Enzyme is a JavaScript library developed by Air B&B for use with testing ReactJS web applications. We learned this and other testing libraries in the AlbanyCanCode ReactJS class, but it wasn't required for any of our projects. I implemented it on two of my projects with the ultimate goal of becoming a TDD developer.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="mocha" class="svg" src="img/tech-icons/tech-icon-mocha.svg" alt="Mocha" title="Mocha">
+                  <p class="tech--grid-icon-popup display-none">Mocha</p>
+                  <div data-tech-name="Mocha" data-tech-proficiency="55" class="display-none">Mocha is a JavaScript library used for unit testing JavaScript code. The AlbanyCanCode ReactJS course covered Mocha in conjunction with Enzyme. We used it for multiple in-class exercises and I implemented it on two of my projects.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="sinon" class="svg" src="img/tech-icons/tech-icon-sinon.svg" alt="Sinon" title="Sinon">
+                  <p class="tech--grid-icon-popup display-none">Sinon</p>
+                  <div data-tech-name="Sinon" data-tech-proficiency="45" class="display-none">I taught myself how to use Sinon when I was trying to create a testing suite for a ReactJS project using Mocha and Enzyme. I couldn't find a good way to mimic function calls and mock AJAX calls so I started Googling and came across Sinon. I implemented it on one project.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="photoshop" class="svg" src="img/tech-icons/tech-icon-photoshop.svg" alt="Adobe Photoshop" title="Adobe Photoshop">
+                  <p class="tech--grid-icon-popup display-none">Adobe Photoshop</p>
+                  <div data-tech-name="Adobe Photoshop" data-tech-proficiency="90" class="display-none">I've used Photoshop for over 20 years as the primary tool in my graphic design career. My use of the application mostly includes but isn't limited to image and text manipulation including photo-illustration, retouching, colorizing, stylization, image optimization, and layout and design.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="illustrator" class="svg" src="img/tech-icons/tech-icon-illustrator.svg" alt="Adobe Illustrator" title="Adobe Illustrator">
+                  <p class="tech--grid-icon-popup display-none">Adobe Illustrator</p>
+                  <div data-tech-name="Adobe Illustrator" data-tech-proficiency="90" class="display-none">I've used Illustrator for over 20 years in my graphic design career. I'm very well versed in creating and manipulating vector graphics as well as using it for layout purposes. I've also used it (on this site) to export SVG files in such a way as to create nested groups with pre-named IDs for easier manipulation during web development.</div>
+                </div>
+                <div class="tech--grid-icon">
+                  <img id="xd" class="svg" src="img/tech-icons/tech-icon-xd.svg" alt="Adobe XD" title="Adobe XD">
+                  <p class="tech--grid-icon-popup display-none">Adobe XD</p>
+                  <div data-tech-name="Adobe XD" data-tech-proficiency="07" class="display-none">I'm very new to Adobe XD. My experience with it so far has been to complete a couple of tutorials. I've also started using it to begin prototyping a website that I'm currently developing.</div>
+                </div>
+              </div>
+
             </div>
-            <div class="tech--grid">
-              <!-- IMGs with sources SVGs are replaced by inline SVGs with script in main.js. -->
-      
-              <!-- If you have SVG elements of different shapes, AND you want them to be scalable when the container 
-                  scales, BUT you don't want them to be sized according to the container (for example if the viewbox
-                  is cropped exactly to the image dimensions: a wide image set to "width=80%" will be much smaller 
-                  than a narrow image set to the same width), THEN you MUST make your viewbox the same for ALL images 
-                  (it should be a square based on the largest dimenision found in the group - either width or height). 
-                  THEN you can use that to set your scale relative to the container (ie: svg { width: 80% } ). 
-                  This techinque is easily accomplished in Illustrator by centering all the images on the same sized
-                  artboard before saving as an SVG. -->
-              <div class="tech--grid-icon">
-                <img id="javascript" class="svg active" src="img/tech-icons/tech-icon-js.svg" alt="JavaScript">
-                <p class="tech--grid-icon-popup display-none">JavaScript</p>
-                <div data-tech-name="JavaScript" data-tech-proficiency="85" class="display-none">JavaScript is my favorite tool and one of my strongest skills. I have a solid grasp of all the core ES5 & ES6 JavaScript concepts such as scope, higher order functions, classes, asynchronous programming, promises, async/await, polymorphism, recursion, IIFEs, currying, arrow functions, DOM traversal and the 'this' keyword.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="html" class="svg" src="img/tech-icons/tech-icon-html.svg" alt="HTML">
-                <p class="tech--grid-icon-popup display-none">HTML5</p>
-                <div data-tech-name="HTML5" data-tech-proficiency="80" class="display-none">I've been working with HTML5 since I first started teaching myself web development about four years ago. While my understanding has grown much in that time, it's such a large and rich mark-up language I'm sure I'll be making new discoveries for years to come.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="css" class="svg" src="img/tech-icons/tech-icon-css.svg" alt="CSS">
-                <p class="tech--grid-icon-popup display-none">CSS3</p>
-                <div data-tech-name="CSS3" data-tech-proficiency="60" class="display-none">I've been working with Cascading Style Sheets for about four years now. Some of the latest CSS features I've made use of are Flexbox, Scroll Snapping, Feature Queries and Native Variables. I also now prefer the use of "em" and "rem" measurement units which I find to be essential for responsive design.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="reactjs" class="svg" src="img/tech-icons/tech-icon-react.svg" alt="React">
-                <p class="tech--grid-icon-popup display-none">ReactJS</p>
-                <div data-tech-name="ReactJS" data-tech-proficiency="65" class="display-none">In January 2019 I completed an AlbanyCanCode ReactJS course which made me a devout believer in React. The course covered not only the base ReactJS library but also Axios, React-Redux, React-Router, React-Promises, React-Thunk and React-Bootstrap. For the final project our team developed the front-end portion of the <a href="http://grads.albanycancode.org/" target="_blank">ACC Graduate Portal</a>.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="nodejs" class="svg" src="img/tech-icons/tech-icon-node.svg" alt="NodeJS">
-                <p class="tech--grid-icon-popup display-none">NodeJS</p>
-                <div data-tech-name="NodeJS" data-tech-proficiency="50" class="display-none">In March of 2019 I completed a 36-hour NodeJS course offered by Udemy.com covering NodeJS, ExpressJS, authorization, MySQL, MongoDB, sessions, emailing, transactions, error handling, MVC, REST APIs, GraphQL and Websockets IO. Later that spring, the ACC ReactJS instructors asked me to create new back-end features and routes for the students' final project.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="git" class="svg" src="img/tech-icons/tech-icon-git.svg" alt="Git">
-                <p class="tech--grid-icon-popup display-none">Git</p>
-                <div data-tech-name="Git" data-tech-proficiency="15" class="display-none">I freely admit I've barely scratched the surface of Git. I've used it extensively for three team projects but only with a small set of commands. I'm very comfortable with checking out and deleting branches, fetching and tracking remote branches and many of the nuances associated with adding, committing, pushing, pulling and merging code.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="mongodb" class="svg" src="img/tech-icons/tech-icon-mongodb.svg" alt="MongoDB">
-                <p class="tech--grid-icon-popup display-none">MongoDB</p>
-                <div data-tech-name="MongoDB" data-tech-proficiency="25" class="display-none">I completed MongoDB training provided by Udemy which included the Mongoose ODM. I was then invited by the AlbanyCanCode React instructors to use my new knowledge to help migrate the <a href="http://grads.albanycancode.org/" target="_blank">ACC Graduate Portal</a> from an AWS S3 MySQL database to MongoDB Atlas, creating schemas, managing connections and refactoring the database queries.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="mysql" class="svg" src="img/tech-icons/tech-icon-mysql.svg" alt="MySQL">
-                <p class="tech--grid-icon-popup display-none">MySQL</p>
-                <div data-tech-name="MySQL" data-tech-proficiency="10" class="display-none">So far, my exposure to SQL database structures has been limited. I took a NodeJS course offered by Udemy.com and it briefly covered MySQL using both raw queries and the Sequelize ORM. The lessons covered installing and setting up a MySQL database, creating tables and related tables and making queries.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="jquery" class="svg" src="img/tech-icons/tech-icon-jquery.svg" alt="jQuery">
-                <p class="tech--grid-icon-popup display-none">jQuery</p>
-                <div data-tech-name="jQuery" data-tech-proficiency="30" class="display-none">jQuery has been a recent experiment for me. In the past I've mostly used it for traversing the DOM and manipulating elements in small ways, but in this website I've started using it to implement SVG animations (like this one) and scroll-based transitions.</div>
-              </div>
-              <div class="tech--grid-icon">
-                  <img id="sass" class="svg" src="img/tech-icons/tech-icon-sass.svg" alt="Sass">
-                <p class="tech--grid-icon-popup display-none">Sass</p>
-                <div data-tech-name="Sass" data-tech-proficiency="20" class="display-none">Sass is another technology that I find promising but have yet to use in an extensive way. A few years ago I used a similar SSL called Less when designing a Bootstrap-based website in order to manipulate the Bootstrap variables, but my use of Sass has been limited to classroom exercises.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="bootstrap" class="svg" src="img/tech-icons/tech-icon-bootstrap.svg" alt="Bootstrap">
-                <p class="tech--grid-icon-popup display-none">Bootstrap</p>
-                <div data-tech-name="Bootstrap" data-tech-proficiency="50" class="display-none">I'm pretty familiar both with Bootstrap 3 and 4. I built a 50+ view website using Bootstrap 3 a couple of years ago (that never made it to deployment). Recently I've been using Bootstrap 4 including its overhaul of the grid system and introduction of cards, spacing utility classes and extensive user of "em" and "rem" units of measurement.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="wordpress" class="svg" src="img/tech-icons/tech-icon-wordpress.svg" alt="WordPress">
-                <p class="tech--grid-icon-popup display-none">WordPress</p>
-                <div data-tech-name="WordPress" data-tech-proficiency="10" class="display-none">As a final project for the AlbanyCanCode Front-End Web-Development class, my team redesined a website for a local non-profit. We settled on WordPress as a CMS but we also decided to create a custom theme which meant one of us (me) had to learn enough PHP to make that happen. We also had to become familiar with MAMP and the WP dashboard and codex.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="enzyme" class="svg" src="img/tech-icons/tech-icon-enzyme.svg" alt="Enzyme">
-                <p class="tech--grid-icon-popup display-none">Enzyme</p>
-                <div data-tech-name="Enzyme" data-tech-proficiency="30" class="display-none">Enzyme is a JavaScript library developed by Air B&B for use with testing ReactJS web applications. We learned this and other testing libraries in the AlbanyCanCode ReactJS class, but it wasn't required for any of our projects. I implemented it on two of my projects with the ultimate goal of becoming a TDD developer.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="mocha" class="svg" src="img/tech-icons/tech-icon-mocha.svg" alt="Mocha">
-                <p class="tech--grid-icon-popup display-none">Mocha</p>
-                <div data-tech-name="Mocha" data-tech-proficiency="55" class="display-none">Mocha is a JavaScript library used for unit testing JavaScript code. The AlbanyCanCode ReactJS course covered Mocha in conjunction with Enzyme. We used it for multiple in-class exercises and I implemented it on two of my projects.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="sinon" class="svg" src="img/tech-icons/tech-icon-sinon.svg" alt="Sinon">
-                <p class="tech--grid-icon-popup display-none">Sinon</p>
-                <div data-tech-name="Sinon" data-tech-proficiency="45" class="display-none">I taught myself how to use Sinon when I was trying to create a testing suite for a ReactJS project using Mocha and Enzyme. I couldn't find a good way to mimic function calls and mock AJAX calls so I started Googling and came across Sinon. I implemented it on one project.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="photoshop" class="svg" src="img/tech-icons/tech-icon-photoshop.svg" alt="Adobe Photoshop">
-                <p class="tech--grid-icon-popup display-none">Adobe Photoshop</p>
-                <div data-tech-name="Adobe Photoshop" data-tech-proficiency="90" class="display-none">I've used Photoshop for over 20 years as the primary tool in my graphic design career. My use of the application mostly includes but isn't limited to image and text manipulation including photo-illustration, retouching, colorizing, stylization, image optimization, and layout and design.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="illustrator" class="svg" src="img/tech-icons/tech-icon-illustrator.svg" alt="Adobe Illustrator">
-                <p class="tech--grid-icon-popup display-none">Adobe Illustrator</p>
-                <div data-tech-name="Adobe Illustrator" data-tech-proficiency="90" class="display-none">I've used Illustrator for over 20 years in my graphic design career. I'm very well versed in creating and manipulating vector graphics as well as using it for layout purposes. I've also used it (on this site) to export SVG files in such a way as to create nested groups with pre-named IDs for easier manipulation during web development.</div>
-              </div>
-              <div class="tech--grid-icon">
-                <img id="xd" class="svg" src="img/tech-icons/tech-icon-xd.svg" alt="Adobe XD">
-                <p class="tech--grid-icon-popup display-none">Adobe XD</p>
-                <div data-tech-name="Adobe XD" data-tech-proficiency="07" class="display-none">I'm very new to Adobe XD. My experience with it so far has been to complete a couple of tutorials. I've also started using it to begin prototyping a website that I'm currently developing.</div>
-              </div>
-            </div>
+            <!-- End tech--popup -->
+
           </div>
+
         </section>
 
         <section id="development">
