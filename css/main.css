@@ -19,6 +19,7 @@ body {
   font-family: "Roboto Mono", monospace, sans-serif;
   font-weight: 700;
   background-color: #232323;
+  -webkit-overflow-scrolling: touch;
 }
 div, article, aside, details,
 figcaption, figure, footer,
@@ -318,7 +319,6 @@ main {
   max-height: 1600px;
   overflow-y: hidden;
   background-color: #232323;
-  display: none;
 }
 .background-1 img {
   display: block;
@@ -460,16 +460,11 @@ main {
 #my-interests {
   position: relative;
   width: 100%;
+  background-image: url("../img/bills-website-bg-2.jpg");
+  background-position: 50% 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 8em 0;
-}
-
-@media (min-width: 480px) {
-  #my-interests {
-    background-image: url("../img/bills-website-bg-2.jpg");
-    background-position: 50% 55%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 }
 
 
