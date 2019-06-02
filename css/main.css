@@ -249,16 +249,15 @@ ul#nav-list li a {
   background-color: #00b3c8;
   box-shadow: 0 0.3em 0.4em #00000044;
 }
-.header--pedigree.active {
-  height: 3em;
-  transition: height .25s ease;
-}
 .header--pedigree p {
   color: #fff;
   font-size: 0.9em;
 }
-.header--pedigree span {
+.header--pedigree .header--pedigree-divider {
   color: #222;
+}
+.header--pedigree .header--pedigree-details {
+  display: none;
 }
 .header--pedigree a {
   color: #fff;
@@ -292,6 +291,15 @@ ul#nav-list li a {
   }
   #w-nav-logo:hover {
     cursor: pointer;
+  }
+  .header--pedigree.active {
+    height: 3em;
+    transition: height .25s ease;
+  }
+}
+@media (min-width: 630px) {
+  .header--pedigree .header--pedigree-details {
+    display: inline;
   }
 }
 

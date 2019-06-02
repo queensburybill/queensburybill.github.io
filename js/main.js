@@ -26,7 +26,9 @@ $(function() {
       $svg = $svg.removeAttr("xmlns:a");
       if ($(this)[0].url === "img/w-nav-logo.svg") {
         $svg.on("click", function() {
-          $(".header--pedigree").toggleClass("active");
+          if($(window).width() >= 480) {
+            $(".header--pedigree").toggleClass("active");
+          }
         });
       }
       $img.replaceWith($svg);

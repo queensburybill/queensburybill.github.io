@@ -68,9 +68,6 @@ see http://getbem.com/
   flex-basis: 100%;
   padding: 1.5em 0 0 .5em;
 }
-.tech--popup-experience h3 {
-  color: #afafaf;
-}
 .tech--popup-experience a {
   text-decoration: none;
   color: #afafaf;
