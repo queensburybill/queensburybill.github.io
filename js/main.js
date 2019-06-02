@@ -7,6 +7,7 @@ $(function() {
     var imgID = $img.attr("id");
     var imgClass = $img.attr("class");
     var imgURL = $img.attr("src");
+    var imgTitle = $img.attr("title");
     $.get(imgURL, function (data) {
       var $svg = $(data).find("svg");
       if (typeof imgID !== "undefined") {
@@ -15,16 +16,17 @@ $(function() {
       if (typeof imgClass !== "undefined") {
         $svg = $svg.attr("class", imgClass + " replaced-svg");
       }
+      if (typeof imgTitle !== "undefined") {
+        // Places the title in 3 different places because I couldn't get tooltips to display in FireFox (and never did).
+        $svg = $svg.attr("title", imgTitle);
+        $firstChild = $($svg.children()[0]);
+        $firstChild.prepend(`<title>${imgTitle}</title>`);
+        $svg.prepend(`<title>${imgTitle}</title>`);
+      }
       $svg = $svg.removeAttr("xmlns:a");
       if ($(this)[0].url === "img/w-nav-logo.svg") {
         $svg.on("click", function() {
-          const $pedigree = $(".header--pedigree");
-          $pedigree.slideToggle({
-            start: function () {
-              $(this).css({ display: "flex" });
-            }, 
-            duration: 250
-          });
+          $(".header--pedigree").toggleClass("active");
         });
       }
       $img.replaceWith($svg);

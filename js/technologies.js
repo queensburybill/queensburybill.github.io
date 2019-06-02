@@ -35,7 +35,7 @@ $(function() {
         // Adds the argument in the viewTechnologies "function"
         const $viewTech = $("#view-technologies");
         const $techName = $($(this).find("[data-tech-name]")[0]).attr("data-tech-name");
-        $viewTech.text(`${$techName}`) ;
+        $viewTech.text(`${$techName}`);
 
         const $dataElement = $($(this).find("[data-tech-proficiency]")[0]);
 
@@ -57,12 +57,13 @@ $(function() {
     $gridIcon.addClass("running");
 
     const $techPopup = $(".tech--popup");
+    const $techProfGraphic = $($techPopup.find("#tech--popup-proficiency")[0]);
     const $techExpName = $($techPopup.find("#tech--popup-experience-name")[0]);
     const $techExpDesc = $($techPopup.find("#tech--popup-experience-description")[0]);
     const $techProfText = $($techPopup.find(".tech--popup-proficiency-text")[0]);
     const $percentSpan = $($techProfText.find("h1 span")[0]);
     let oldPercent = parseInt($percentSpan.text());
-    const circleGroups = $($techPopup.find("svg g"));
+    const circleGroups = $($techProfGraphic.find("svg g"));
 
     // Set new tech name and description
     $techExpName

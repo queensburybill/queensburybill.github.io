@@ -93,18 +93,6 @@ see http://getbem.com/
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
-/* .tech--grid {
-  order: 2;
-  flex-basis: 25%;
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  height: 17em;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-} */
 .tech--grid::-webkit-scrollbar {
   display: none;
 }
@@ -194,6 +182,7 @@ see http://getbem.com/
     width: 6em;
     height: 6em;
   }
+  .tech--grid-icon img,
   .tech--grid-icon svg {
     width: 75%;
   }
@@ -209,6 +198,7 @@ see http://getbem.com/
 }
 
 @media (min-width: 768px) {
+  .tech--grid-icon img,
   .tech--grid-icon svg {
     width: 60%;
   }
