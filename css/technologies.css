@@ -173,7 +173,8 @@ see http://getbem.com/
     flex-wrap: wrap;
     justify-content: space-between;
     height: auto;
-    overflow: none;
+    overflow: unset;
+    overflow-y: unset;
   }
   .tech--grid-icon {
     width: 6em;

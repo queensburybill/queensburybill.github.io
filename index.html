@@ -14,6 +14,8 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/technologies.css">
   </head>
@@ -28,9 +30,7 @@
             </a>
           </li>
           <li id="w-logo-navbar">
-            <p>
-              <img id="w-nav-logo" class="svg" src="img/w-nav-logo.svg" alt="w nav-link">
-            </p>
+            <img id="w-nav-logo" class="svg" src="img/w-nav-logo.svg" alt="w nav-link">
           </li>
           <li id="github-navbar">
             <a href="https://github.com/queensburybill" target="_blank">
@@ -68,6 +68,9 @@
     </header>
 
     <main>
+      <div class="background-1">
+        <img src="img/bills-website-bg.jpg" alt="background">
+      </div>
       <div class="background-1">
         <img src="img/bills-website-bg.jpg" alt="background">
       </div>
@@ -402,16 +405,16 @@
             <p class="code-heading"><span class="code-special">w</span>.<span class="code-function">myExperience</span>(<span id="view-work" class="code-special">development</span>);</p>
           </div>
           <div class="gallery--wrapper">
-            <div class="content">
-              <div class="gallery--images">
+            <div class="content active">
+              <div class="gallery--images active">
                 <div class="image-box">
-                  <img src="img/portfolio/portfolio-web-grad-portal.jpg" data-name="graduate portal" alt="graduate portal">
+                  <img src="img/portfolio/portfolio-web-grad-portal.jpg" data-section="development" data-name="carousel--grad-portal" alt="Graduate Portal">
                   <div class="image-box-label">
                     <h2>Graduate Portal</h2>
                   </div>
                 </div>
                 <div class="image-box">
-                  <img src="img/portfolio/portfolio-web-retro-board.jpg" data-name="Retro Board" alt="Retro Board">
+                  <img src="img/portfolio/portfolio-web-retro-board.jpg" data-section="development" data-name="carousel--retro-board" alt="Retro Board">
                   <div class="image-box-label">
                     <h2>Retro Board</h2>
                   </div>
@@ -426,43 +429,62 @@
             <p class="code-heading"><span class="code-special">w</span>.<span class="code-function">myExperience</span>(<span id="view-work" class="code-special">design</span>);</p>
           </div>
           <div class="gallery--wrapper">
-            <div class="content">
-              <div class="gallery--images">
-                <div class="image-box">
-                  <img src="img/portfolio/portfolio-advertising.jpg" data-name="advertising" alt="advertising">
+            <div class="content active">
+              <div class="gallery--images active">
+                <div class="image-box" data-section="design">
+                  <img src="img/portfolio/portfolio-advertising.jpg" data-name="carousel--advertising" alt="Advertising">
                   <div class="image-box-label">
                     <h2>advertising</h2>
                   </div>
                 </div>
-                <div class="image-box">
-                  <img src="img/portfolio/portfolio-illustration.jpg" data-name="illustration" alt="illustration">
+                <div class="image-box" data-section="design">
+                  <img src="img/portfolio/portfolio-illustration.jpg" data-name="carousel--illustration" alt="Illustration">
                   <div class="image-box-label">
                     <h2>illustration</h2>
                   </div>
                 </div>
-                <div class="image-box">
-                  <img src="img/portfolio/portfolio-pckg-food.jpg" data-name="pckg-food" alt="food packaging">
+                <div class="image-box" data-section="design">
+                  <img src="img/portfolio/portfolio-pckg-food.jpg" data-name="carousel--pckg-food" alt="Food Packaging">
                   <div class="image-box-label">
                     <h2>food packaging</h2>
                   </div>
                 </div>
-                <div class="image-box">
-                  <img src="img/portfolio/portfolio-pckg-entertainment.jpg" data-name="pckg-entertainment" alt="entertainment packaging">
+                <div class="image-box" data-section="design">
+                  <img src="img/portfolio/portfolio-pckg-entertainment.jpg" data-name="carousel--pckg-entertainment" alt="Entertainment Packaging">
                   <div class="image-box-label">
                     <h2>entertainment packaging</h2>
                   </div>
                 </div>
-                <div class="image-box">
-                  <img src="img/portfolio/portfolio-logos.jpg" data-name="logos" alt="logos">
+                <div class="image-box" data-section="design">
+                  <img src="img/portfolio/portfolio-logos.jpg" data-name="carousel--logos" alt="Logos">
                   <div class="image-box-label">
                     <h2>logos</h2>
                   </div>
                 </div>
-                <div class="image-box">
-                  <img src="img/portfolio/portfolio-iconography.jpg" data-name="iconography" alt="iconography">
+                <div class="image-box" data-section="design">
+                  <img src="img/portfolio/portfolio-iconography.jpg" data-name="carousel--iconography" alt="iconography">
                   <div class="image-box-label">
                     <h2>iconography</h2>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="content active">
+              <div id="carousel--advertising" class="owl-carousel">
+                <div>
+                  <img src="img/portfolio/slides/advertising-1.jpg" alt="Advertising: Bravo campaign">
+                </div>
+                <div>
+                  <img src="img/portfolio/slides/advertising-2.jpg" alt="Advertising: American West key art">
+                </div>
+                <div>
+                  <img src="img/portfolio/slides/advertising-3.jpg" alt="Advertising: NSS Labs information security brochure">
+                </div>
+                <div>
+                  <img src="img/portfolio/slides/advertising-4.jpg" alt="Advertising: NSS Labs trade show graphics">
+                </div>
+                <div>
+                  <img src="img/portfolio/slides/advertising-5.jpg" alt="Advertising: FitWarz PowerPoint presentation">
                 </div>
               </div>
             </div>
@@ -495,6 +517,7 @@
     </div> -->
 
     <script src="js/jquery.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/technologies.js"></script>
 

@@ -53,6 +53,24 @@ $(function() {
     });
   });
 
+  $(".image-box").each(function() {
+    $(this).on("click", function() {
+      sectionId = "#" + $(this).attr("data-section");
+      $($(sectionId + " .gallery--wrapper .content")[0]).removeClass("active");
+      $img = $($(this).find("img")[0]);
+      carouselId = "#" + $img.attr("data-name");
+      $(carouselId).addClass("active");
+      $(carouselId).owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{ items:1 }
+        }
+    });
+    });
+  });
+
 });
 
 $(window).on("resize", function() {
