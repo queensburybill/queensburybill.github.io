@@ -17,7 +17,7 @@ $(function() {
         $svg = $svg.attr("class", imgClass + " replaced-svg");
       }
       if (typeof imgTitle !== "undefined") {
-        // Places the title in 3 different places because I couldn't get tooltips to display in FireFox (and never did).
+        // Places the title in 3 different places in an effort to get tooltips to display in FireFox (but never did).
         $svg = $svg.attr("title", imgTitle);
         $firstChild = $($svg.children()[0]);
         $firstChild.prepend(`<title>${imgTitle}</title>`);
@@ -53,34 +53,53 @@ $(function() {
     });
   });
 
-  $(".image-box").each(function() {
+  // Carousel controller
+  $("#design .image-box").each(function() {
     $(this).on("click", function() {
-      sectionId = "#" + $(this).attr("data-section");
-      $($(sectionId + " .gallery--wrapper .content")[0]).removeClass("active");
-      $img = $($(this).find("img")[0]);
-      carouselId = "#" + $img.attr("data-name");
+      $content = $($("#design .gallery--wrapper .content")[0]);
+      const $img = $($(this).find("img")[0]);
+      const carouselId = "#" + $img.attr("data-name");
+      const $closeBtn = $(carouselId).find(".close-btn");
+
+      $content.removeClass("active");
       $(carouselId).addClass("active");
-      $(carouselId).owlCarousel({
+
+      $closeBtn.on("click", function() {
+        $content.addClass("active");
+        $(carouselId).removeClass("active");
+      });
+
+      $(`${carouselId} .owl-carousel`).owlCarousel({
         loop:true,
         margin:10,
         nav:true,
         responsive:{
-            0:{ items:1 }
+          0:{ items:1 }
         }
-    });
+      });
     });
   });
 
 });
 
-$(window).on("resize", function() {
-  const $navList = $("#nav-list");
-  if ($navList.width() >= $(window).width()) {
-    $("#menu-btn").removeClass("active");
-    $("#nav-navbar").removeClass("active");
-    $("#nav-list").removeClass("active");
-    $navList.slideUp(500);
-  }
+// Fade in on scroll fx
+$("main").on("scroll resize", function() {
+  $(".fadein-left").each(function(i) {
+    
+    let elementTop = $(this).offset().top;
+    let windowHeight = $(window).height();
+
+    if(elementTop - windowHeight * .55 < 0) {
+      $(this).animate({
+        "opacity": "1",
+        "margin-top": "0px",
+        "margin-left": "0px"
+      },800);
+    }
+      
+  }); 
 });
+
+$("main").trigger("scroll");
 
 

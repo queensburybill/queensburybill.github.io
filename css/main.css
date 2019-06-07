@@ -166,7 +166,7 @@ ul#nav-list {
   justify-content: center;
   list-style-type: none;
   width: 100%;
-  height: 36em;
+  height: 29.6em;
   margin: 0;
   padding: 0;
 }
@@ -189,9 +189,6 @@ ul#nav-list li svg {
   width: 3.7em;
   height: 3.7em;
 }
-/* ul#nav-list li:hover {
-  background-color: #131313dd;
-} */
 ul#nav-list li a {
   display: block;
   width: 100%;
@@ -203,9 +200,6 @@ ul#nav-list li a {
   color: #00b3c8;
   text-decoration: none;
 }
-/* ul#nav-list li:hover a {
-  color: #deb331;
-} */
 .menu-btn {    
   position: fixed;
   display: flex;
@@ -263,6 +257,7 @@ ul#nav-list li a {
   color: #fff;
   text-decoration: none;
   border-bottom: .1em dotted #fff;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 .header--pedigree a:hover {
   color: #222;
@@ -289,6 +284,7 @@ ul#nav-list li a {
   #nav-navbar svg:hover path, 
   #nav-navbar svg:hover polygon {
     fill: #deb331;
+    transition: fill 0.5s;
   }
   #w-nav-logo:hover {
     cursor: pointer;
@@ -355,6 +351,8 @@ main {
   display: flex;
   align-items: center;
   width: 100%;
+  margin-top: 15vw;
+  opacity: 0;
 }
 #about .content {
   display: flex;
@@ -408,6 +406,8 @@ main {
   position: relative;
   width: 100%;
   margin-bottom: 5em;
+  margin-left: -15vw;
+  opacity: 0;
 }
 /* This puts an offset on the scrollTop for the in-page hashchange. */
 #tech::before { 
@@ -434,6 +434,8 @@ main {
   position: relative;
   width: 100%;
   margin-bottom: 5em;
+  margin-left: -15vw;
+  opacity: 0;
 }
 /* This puts an offset on the scrollTop for the in-page hashchange. */
 #development::before { 
@@ -467,6 +469,8 @@ main {
   position: relative;
   width: 100%;
   margin-bottom: 0;
+  margin-left: -15vw;
+  opacity: 0;
 }
 /* This puts an offset on the scrollTop for the in-page hashchange. */
 #design::before { 
@@ -479,9 +483,11 @@ main {
 }
 #design .gallery--wrapper .content {
   display: none;
+  transition: display 0.5s;
 }
 #design .gallery--wrapper .content.active {
   display: block;
+  transition: display 0.5s;
 }
 
 
@@ -496,6 +502,8 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 5em 0 4em;
+  margin-left: -15vw;
+  opacity: 0;
 }
 
 @media (min-width: 480px) {
@@ -531,10 +539,16 @@ main {
   flex-basis: 100%;
   background-color: #deb331;
   box-shadow: 0.4em 0.4em 0.6em #00000044;
+  border-radius: 0.3em;
   margin-bottom: 2em;
+}
+.image-box a {
+  padding: 0;
+  line-height: .08em;
 }
 .image-box img {
   width: 100%;
+  border-radius: 0.3em;
 }
 .image-box:hover img {
   opacity: 0.1;
@@ -580,22 +594,62 @@ main {
 #carousel--iconography.active {
   display: block;
 }
+.gallery--wrapper .content.active .close-btn { 
+  display: block;  
+  position: absolute;
+  bottom: 2.5em;
+  right: 2.5em;
+  height: 2.2em;
+  width: 2.2em;
+  z-index: 10;
+}
+.gallery--wrapper .content.active .close-btn:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "\d7"; /* use the hex value here... */
+  font-size: 2.2em; 
+  color: #222;
+  line-height: 2em;
+  text-align: center;
+}
+.gallery--wrapper .content .close-btn {   
+  display: none;
+}
+#carousel--iconography {
+  padding-bottom: 4.8em;
+}
+#carousel--iconography img {
+  width: 100%;
+}
 
 @media (min-width: 480px) {
   .image-box {
     flex-basis: 48%;
+  }
+  .gallery--wrapper .close-btn:hover {
+    cursor: pointer;
   }
 }
 
 /****************************************/
 /*** OWL CAROUSEL OVERRIDES *************/
 /****************************************/
+.owl-carousel {
+  border-radius: 0.3em;
+}
+.owl-carousel img {
+  border-radius: 0.3em;
+}
 .owl-nav {
   text-align: center;
 }
 .owl-carousel .owl-nav button.owl-next, 
 .owl-carousel .owl-nav button.owl-prev {
-  font-size: 2em;
+  font-size: 2.5em;
+  color: #222;
 }
 .owl-dots {
   text-align: center;
@@ -607,12 +661,12 @@ main {
     height: 0.6em;
     width: 0.6em;
     display: inline-block;
-    background: rgba(0,0,0, 0.3);
+    background: #22222244;
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
 .owl-carousel button.owl-dot.active {
-    background: rgba(0,0,0, 1);
+    background: #222;
 }
 
 /****************************************/
@@ -650,18 +704,6 @@ footer p a:hover {
 .copyright span {
   font-size: 107%;
   margin-right: 0.1em;
-}
-
-/****************************************/
-/*** FLOATING IMAGES ********************/
-/****************************************/
-#coffee-hand {
-  position: fixed;
-  top: 100vh;
-  right: -450px;
-}
-#coffee-hand img {
-  /* position: relative; */
 }
 
 

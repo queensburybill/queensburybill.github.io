@@ -107,15 +107,6 @@ see http://getbem.com/
   height: 4.8em;
   margin: 0 auto;
 }
-.tech--grid-icon-popup {
-  position: absolute;
-  top: 5.6em;
-  font-size: 0.83em;
-  line-height: 1.2em;
-  color: #686868;
-  width: 100%;
-  text-align: center;
-}
 .tech--grid-icon img,
 .tech--grid-icon svg {
   width: 100%;
@@ -123,13 +114,16 @@ see http://getbem.com/
 .tech--grid-icon:hover {
   cursor: pointer;
 }
-.tech--grid-icon:hover svg path,
-.tech--grid-icon:hover svg polygon {
-  fill: #deb331;
+.tech--grid-icon svg path,
+.tech--grid-icon svg polygon {
+  transition: fill 0.3s;
 }
 .tech--grid-icon.active svg path,
 .tech--grid-icon.active svg polygon {
   fill: #deb331;
+}
+.tech--grid-icon-popup {
+  display: none;
 }
 
 /*** TECH Media Queries **************************/
@@ -180,12 +174,28 @@ see http://getbem.com/
     width: 6em;
     height: 6em;
   }
+  .tech--grid-icon:hover svg path,
+  .tech--grid-icon:hover svg polygon {
+    fill: #deb331;
+  }
   .tech--grid-icon img,
   .tech--grid-icon svg {
     width: 75%;
   }
   .tech--grid-icon-popup {
+    position: absolute;
     top: 5.9em;
+    display: block;
+    opacity: 0;
+    font-size: 0.83em;
+    line-height: 1.2em;
+    color: #686868;
+    width: 100%;
+    text-align: center;
+    transition: opacity 0.3s;
+  }
+  .tech--grid-icon:hover .tech--grid-icon-popup {
+    opacity: 1;
   }
   .tech--popup-experience {
     flex: 1;

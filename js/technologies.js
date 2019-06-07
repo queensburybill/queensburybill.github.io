@@ -10,22 +10,6 @@ $(function() {
 
     const $tech = $(technology);
 
-    // Enables tech icon hover fx.
-    $tech.hover(
-      function() { 
-        if ($(window).width() >= 480) {
-          const $techIconPopup = $($(this).find(".tech--grid-icon-popup")[0]);
-          $techIconPopup.removeClass("display-none");
-        }
-      }, 
-      function() { 
-        if ($(window).width() >= 480) {
-          const $techIconPopup = $($(this).find(".tech--grid-icon-popup")[0]);
-          $techIconPopup.addClass("display-none");
-        }
-      } 
-    );
-
     $tech.on("click", function() {
 
       if (!$(".tech--grid-icon").hasClass("running")) {
