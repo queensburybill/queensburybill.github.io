@@ -691,6 +691,7 @@ footer p a {
   color: #fff;
   text-decoration: none;
   border-bottom: .1em dotted #fff;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 footer p a:hover {
   color: #222;
